@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authenticity Validator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Authenticity Validator</h1>
+
+    <p class="subtitle">
+        Upload your Academic Document
+    </p>
+
+    <div class="upload-box">
+
+        <input
+            type="file"
+            id="fileInput"
+            accept=".pdf,.docx,.txt"
+        >
+
+        <button onclick="uploadFile()">
+            Analyze
+        </button>
+
+    </div>
+
+    <div id="loading" class="loading">
+        Analyzing Document...
+    </div>
+
+    <div id="result" class="result">
+
+        <h2>Analysis Result</h2>
+
+        <p>
+            <strong>File :</strong>
+            <span id="filename"></span>
+        </p>
+
+        <p>
+            <strong>Plagiarism :</strong>
+            <span id="plagiarism"></span>%
+        </p>
+
+        <p>
+            <strong>AI Generated :</strong>
+            <span id="ai"></span>%
+        </p>
+
+        <p>
+            <strong>Originality :</strong>
+            <span id="originality"></span>%
+        </p>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
